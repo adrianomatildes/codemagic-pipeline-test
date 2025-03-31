@@ -1,0 +1,19 @@
+workflows:
+  test-pipeline:
+    name: Test Basic Workflow
+    instance_type: linux
+    environment:
+      node: 16.11.1
+    scripts:
+      - name: Build de Teste
+        script: |
+          echo "✅ Pipeline executada com sucesso!"
+    artifacts:
+      - README.md
+    triggering:
+      events:
+        - push
+      branch_patterns:
+        - pattern: "*"
+          include: true
+          source: true
