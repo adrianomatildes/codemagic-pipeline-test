@@ -1,10 +1,10 @@
 workflows:
-  test-pipeline:
-    name: Test Basic Workflow
-    instance_type: linux  # permitido no plano gratuito
+  test-linux:
+    name: Test Pipeline
+    instance_type: linux
     environment:
-      node: 16.11.1
+      node: 18.16.0
     scripts:
-      - name: Hello World
+      - name: Teste rápido
         script: |
-          echo "✅ Pipeline executada com sucesso"
+          echo "🎯 CI funcionando com sucesso"
