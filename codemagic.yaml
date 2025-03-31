@@ -1,19 +1,10 @@
 workflows:
   test-pipeline:
     name: Test Basic Workflow
-    instance_type: linux
+    instance_type: linux  # permitido no plano gratuito
     environment:
       node: 16.11.1
     scripts:
-      - name: Build de Teste
+      - name: Hello World
         script: |
-          echo "✅ Pipeline executada com sucesso!"
-    artifacts:
-      - README.md
-    triggering:
-      events:
-        - push
-      branch_patterns:
-        - pattern: "*"
-          include: true
-          source: true
+          echo "✅ Pipeline executada com sucesso"
