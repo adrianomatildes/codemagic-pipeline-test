@@ -1,10 +1,9 @@
 workflows:
-  test-linux:
+  test-pipeline:
     name: Test Pipeline
     instance_type: linux
     environment:
       node: 18.16.0
     scripts:
-      - name: Teste rápido
-        script: |
-          echo "🎯 CI funcionando com sucesso"
+      - name: Teste
+        script: echo "✅ Funcionou"
